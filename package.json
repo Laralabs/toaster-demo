@@ -20,6 +20,6 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "laralabs-vue-toaster": "^3.0.0"
+        "laralabs-vue-toaster": "^3.0.1"
     }
 }

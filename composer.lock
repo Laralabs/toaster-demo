@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "de4093bdcd5eda507cf53195cfc29ad1",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -452,6 +452,65 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "laralabs/toaster",
+            "version": "dev-3.0.0-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laralabs/toaster.git",
+                "reference": "b147939c509f746baad89a1286f8c8d534cd9454"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laralabs/toaster/zipball/b147939c509f746baad89a1286f8c8d534cd9454",
+                "reference": "b147939c509f746baad89a1286f8c8d534cd9454",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.4",
+                "illuminate/database": "^5.4",
+                "illuminate/session": "^5.4",
+                "illuminate/support": "^5.4",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^3.4",
+                "phpunit/phpunit": ">6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laralabs\\Toaster\\ToasterServiceProvider"
+                    ],
+                    "aliases": {
+                        "Toaster": "Laralabs\\Toaster\\Facades\\Toaster"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laralabs\\Toaster\\": "src/",
+                    "Laralabs\\Toaster\\Tests\\": "tests/"
+                },
+                "files": [
+                    "src/Helpers/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Clinton",
+                    "email": "matt@laralabs.uk"
+                }
+            ],
+            "description": "Easily generate and bind message JSON data to the view for use in frontend toast components",
+            "time": "2018-05-27T19:19:39+00:00"
         },
         {
             "name": "laravel/framework",
@@ -4025,7 +4084,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "laralabs/toaster": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
