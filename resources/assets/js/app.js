@@ -15,8 +15,17 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+import Notifications from 'vue-notification';
+import velocity from 'velocity-animate';
 
-const app = new Vue({
-    el: '#app'
+Vue.use(Notifications, { velocity });
+Vue.component('toaster', require('laralabs-vue-toaster/src/ToasterComponent.vue'));
+
+let app = new Vue({
+    el: '#app',
+    data: {
+        toaster: {
+            data: toaster.data
+        }
+    },
 });
